@@ -83,7 +83,7 @@ public class DataInitializationService implements CommandLineRunner {
         book.setAuthor(author);
         book.setAvailableCopies(availableCopies);
         book.setTotalQuantity(availableCopies);
-        book.setIssued(false); // Fix: Use setIssued() instead of setIsIssued()
+        book.setIssued(false); // Fixed: Use setIssued() now that field is named 'issued'
         book.setStatus("AVAILABLE");
         book.setCreatedAt(LocalDateTime.now());
         return book;

@@ -18,7 +18,7 @@ public class Book {
 	private String author;
 	private int availableCopies;
 	private int totalQuantity;
-	private boolean isIssued = false; // Add the missing field with default value
+	private boolean issued = false; // Changed from isIssued to issued for cleaner setter method
 	private String status;
 	private LocalDateTime createdAt;
 	private LocalDateTime updatedAt;
@@ -35,9 +35,9 @@ public class Book {
 		if (this.totalQuantity == 0) {
 			this.totalQuantity = this.availableCopies;
 		}
-		// Set isIssued to false by default
+		// Set issued to false by default
 		if (this.availableCopies > 0) {
-			this.isIssued = false;
+			this.issued = false;
 		}
 	}
 	
